@@ -4,7 +4,7 @@ const output = document.getElementById("output");
 const loadingRow = document.createElement("tr"); 
 const loadingCell = document.createElement("td");
 loadingCell.colSpan = 2;
-loadingCell.id = 'loading';
+loadingRow.id = 'loading';
 loadingCell.textContent = "Loading...";
 loadingRow.appendChild(loadingCell);
 output.appendChild(loadingRow);

@@ -13,7 +13,7 @@ output.appendChild(loadingRow);
 const promises = [];
 for (let i = 1; i <= 3; i++) {
   const promise = new Promise((resolve, reject) => {
-    const time = Math.floor(Math.random() * 3000) + 1000;
+    const time = Math.floor(Math.random() * 2000) + 1000;
     setTimeout(() => {
       resolve(time);
     }, time);

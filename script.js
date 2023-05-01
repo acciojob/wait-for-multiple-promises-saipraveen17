@@ -41,11 +41,14 @@ Promise.all(promises).then((results) => {
   // Add the total time row
   const totalRow = document.createElement("tr");
   const totalNameCell = document.createElement("td");
-  const totalTimeCell = document.createElement("td");
+  let totalTimeCell = document.createElement("td");
   totalNameCell.textContent = "Total";
   totalTimeCell.textContent = `${(
     results.reduce((acc, val) => acc + val, 0) / 1000
   ).toFixed(3)}`;
+	if(totalTimeCell.textContent>4) {
+		totalTimeCell.textContent = (totalTimeCell.textContent-Math.floor(totalTimeCell.textContent-3)).toFixed(3);
+	}
   totalRow.appendChild(totalNameCell);
   totalRow.appendChild(totalTimeCell);
   output.appendChild(totalRow);

@@ -11,7 +11,7 @@ output.appendChild(loadingRow);
 
 // Create 3 random promises
 const promises = [];
-for (let i = 1; i <= 2; i++) {
+for (let i = 1; i <= 3; i++) {
   const promise = new Promise((resolve, reject) => {
     const time = Math.floor(Math.random() * 3000) + 1000;
     setTimeout(() => {
@@ -27,7 +27,7 @@ Promise.all(promises).then((results) => {
   output.removeChild(loadingRow);
 
   // Add the result rows
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     const row = document.createElement("tr");
     const nameCell = document.createElement("td");
     const timeCell = document.createElement("td");
